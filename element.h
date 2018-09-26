@@ -1,7 +1,6 @@
 /* Element.h - By Vitor Silva */
 
-typedef char * str;
-typedef short int Bool;
+#include "type.h" 
 
 typedef struct {
 	str Name;
