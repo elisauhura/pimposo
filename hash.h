@@ -7,7 +7,7 @@ typedef struct {
 	void * value;
 } Sim;
 
-typedef Sim[] TabSim;
+typedef Sim * TabSim;
 
 /*Prototypes*/
 TabSim TabSim_create(int size);
