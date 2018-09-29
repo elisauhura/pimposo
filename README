@@ -1,0 +1,28 @@
+Projeto de MAC0216
+
+Vitor Pereira da Silva
+NºUSP 10263531
+
+Lucas Medeiros
+NºUSP ???
+
+Estrutura do projeto:
+
+    O projeto está organizado em módulos, cada módulo é composto de 3 arquivos:
+    $MODULO.h -> caeçalho
+    $MODULO.c -> implementação
+    $MODULO.test.c -> teste
+
+    O Makefile gerencia todo o projeto.
+
+    Para compilar o modulo se usa: make $MODULO
+    Para testar o modulo se usa: make test_$MODULO
+
+    Os módulos implementados até o momento são o list, o hash e o element.
+
+    Os módulos de list e hash foram feitos de forma genérica, assim podem ser usados com qualquer tipo de dados.
+
+    O type.h não é um módulo, mas sim um arquivo para tipos de dados comum no projeto.
+
+    `make listmods` deve listar os módulos disponíveis junto com seus test files.
+
