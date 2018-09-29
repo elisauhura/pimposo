@@ -37,11 +37,13 @@ List_Pack List_query_pointer(List l, str name) {
 	ret.l = NULL;
 	ret.v = NULL;
 	List q = NULL;
-	for(; l != NULL; q = l, l = (List) l->next) {
+	for(; l != NULL; l = (List) l->next) {
+		Bool b = 1;
 		for(int i = 0; name[i] != '\0'; i++) {
-			if(name[i] != l->name[i]) break;
+			if(name[i] != l->name[i]) b = 0;
 		}
-		goto found;
+		if(b) goto found;
+		q = l;
 	}
 	return ret;
 found:	ret.v = (void *) l;
@@ -55,7 +57,7 @@ void * List_query(List l, str name) {
 	return ((List) p.v)->value;
 }
 
-List_Pack remove(List l, str name) {
+List_Pack List_remove(List l, str name) {
 	List_Pack pack;
 	pack.l = l;
 	pack.v = NULL;
