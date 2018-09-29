@@ -1,3 +1,5 @@
+/* list.c - by Vitor Silva */
+
 #include "list.h"
 
 #include <stdlib.h>
