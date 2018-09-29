@@ -31,7 +31,7 @@ typedef struct {
 } Path;
 
 typedef struct {
-	void Exit[];
+	void * Exit;
 	
 	/*OOP*/
 	void * __Super; /*Element*/
