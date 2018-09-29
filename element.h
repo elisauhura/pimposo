@@ -1,6 +1,6 @@
 /* Element.h - By Vitor Silva */
 
-#include "type.h" 
+#include "type.h"
 
 typedef struct {
 	str Name;
@@ -22,7 +22,7 @@ typedef struct {
 typedef struct {
 	void * To; /*Place*/
 	Bool Closed;
-	
+
 	/*OOP*/
 	void * __Super; /*Element*/
 	void * __Child;
