@@ -4,13 +4,16 @@
 
 typedef struct {
 	str Name;
+
+	/* For the Future
 	str Articles[4];
 	str LongDesc;
 	str ShortDesc;
-	Element ObjList[];
+	Element * ObjList;
 	void * Attributes;
 	str Action[];
 	str Animation;
+	*/
 
 	/*OOP*/
 	void * __Super;
@@ -41,7 +44,7 @@ typedef struct {
 } Place;
 
 typedef struct {
-	str Adjectives[];
+	str * Adjectives;
 	Bool Hidden;
 
 	/*OOP*/
@@ -57,3 +60,6 @@ typedef struct {
  - throw -> send object from the player to the place
  ...
 */
+
+Element * newElement(str name);
+void freeElement(Element * e);
