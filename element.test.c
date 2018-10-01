@@ -5,7 +5,7 @@
 int main(void) {
 	puts("Testing Element");
 
-	puts("Create Element");
+	puts("Creating Element");
 	Element * e = newElement("Pimp");
 
 	puts("Getting its name (Pimp)");
