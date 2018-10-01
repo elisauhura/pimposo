@@ -1,5 +1,8 @@
 /* List.h - by Vitor Silva */
 
+#ifndef LIST_H
+#define LIST_H
+
 #include "type.h"
 
 typedef struct {
@@ -20,3 +23,6 @@ void List_destroy(List l);
 List List_insert(List l, void * value, str name); /*Return pointer to node(value) or NULL, copies str*/
 void * List_query(List l, str name);
 List_Pack List_remove(List l, str name); /* Needs to return a new List, because the first node may be removed, return NULL if nout found item to be removed*/
+
+
+#endif
