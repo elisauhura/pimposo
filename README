@@ -26,3 +26,6 @@ Estrutura do projeto:
 
     `make listmods` deve listar os módulos disponíveis junto com seus test files.
 
+Para testar o ep:
+
+    Rode um `make test_all`
