@@ -25,7 +25,7 @@ test_element: element
 	./test_element
 	rm test_element
 
-test_all: element hash list
+test_all: test_element test_hash test_list
 	$(CC) all.test.c all.o $(Flags) -o test_all
 	./test_all
 	rm test_all
