@@ -7,7 +7,11 @@ typedef struct {
 	void * value;
 } Sim;
 
-typedef Sim * TabSim;
+typedef struct{
+	int size;
+	int max_size;
+	Sim * entries;
+} *TabSim;
 
 /*Prototypes*/
 TabSim TabSim_create(int size);
