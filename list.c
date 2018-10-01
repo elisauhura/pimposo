@@ -39,11 +39,13 @@ List_Pack List_query_pointer(List l, str name) {
 	ret.l = NULL;
 	ret.v = NULL;
 	List q = NULL;
+	int i;
 	for(; l != NULL; l = (List) l->next) {
 		Bool b = 1;
-		for(int i = 0; name[i] != '\0'; i++) {
+		for(i = 0; name[i] != '\0' || l->name[i] != '\0'; i++) {
 			if(name[i] != l->name[i]) b = 0;
 		}
+		if(name[i] != l->name[i]) b = 0; /*Check stuff likes can and cant*/
 		if(b) goto found;
 		q = l;
 	}

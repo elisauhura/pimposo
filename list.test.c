@@ -11,20 +11,20 @@ int main() {
     puts("Creating List");
     List l = List_create();
     puts("Adding elements");
-    l = List_insert(l, i + 0, "um");
+    l = List_insert(l, i + 0, "quatr");
     l = List_insert(l, i + 1, "dois");
-    l = List_insert(l, i + 2, "tres");
+    l = List_insert(l, i + 2, "quatri");
     l = List_insert(l, i + 3, "quatro");
     puts("Quering some elements (3 and 1)");
-    int * q = List_query(l, "tres");
-    int * p = List_query(l, "um");
+    int * q = List_query(l, "quatri");
+    int * p = List_query(l, "quatr");
     printf("%d\n", * q);
     printf("%d\n", * p);
     puts("Removing 1");
-    List_Pack pack = List_remove(l, "um");
+    List_Pack pack = List_remove(l, "quatr");
     l = pack.l;
     puts("Checking if 1 was removed");
-    if(List_query(l, "um") == NULL)
+    if(List_query(l, "quatr") == NULL)
         puts("Success");
     puts("Freeing it");
     List_destroy(l);
