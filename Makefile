@@ -32,3 +32,6 @@ test_all: test_element test_hash test_list
 
 listmods:
 	ls | grep .c | sed -e s/.c//g
+
+clean:
+	rm *.o
