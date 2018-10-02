@@ -1,0 +1,28 @@
+EF is a special text file that encodes elements for the game
+
+A element begin with
+
+%new
+%type $t
+
+and ends with a
+
+%name
+%string
+Joshua Marquez
+
+%nicknames
+%list
+%string
+Lessy
+%tsil
+
+%actions
+%list
+
+%tsil
+
+%end
+
+The end of the file is marked with a close
+%close
