@@ -1,0 +1,78 @@
+ESCAPE FROM POLI !
+
+
+Proposta do jogo:
+	Mostrar a realidade
+	Caricatura da POLI
+	
+
+
+Você é um aluno da poli 
+
+
+
+Contadores:
+	Motivação
+	Esforço ( stamina )
+	Número de DPs
+	Eventos sem dormir
+
+
+SALAS:
+	GERAL
+		JUPITER-WEB
+			Número de DPs,
+			Pegar Resumo,
+			Grade Horária,
+			Pedir a Carterinha.
+
+	AULAS
+		dormir
+		assinar lista
+		responde professor
+
+	CASA
+		estudar
+		chamar o rappi
+
+	JUPYTER
+
+	-BIBLIOTECA DA FEA
+
+	-BIBLIOTECA DO IME
+
+	-
+
+
+ITENS:
+
+FINAIS
+	Transferência pro IME
+	Transferência pra FEA
+	Jubilado (game over)
+	5 Bola
+	Duplo Diploma
+
+
+COMEÇO
+	passou em: Comp, Elétrica e Minas
+				foi chamado pra Minas
+	aluno da poli
+
+
+
+IDEIAS ENGRAÇADAS
+	Número de DPs ( a cada vez que você vê, aumenta 1 )
+
+
+
+
+itens importantes:
+calculadora HP
+terminal
+
+bata da atlética
+
+
+
+
