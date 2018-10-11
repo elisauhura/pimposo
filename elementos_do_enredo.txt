@@ -2,12 +2,11 @@ ESCAPE FROM POLI !
 
 
 Proposta do jogo:
-	Mostrar a realidade
-	Caricatura da POLI
-	
+	Mostrar caricatura da POLI
+	Trazer alguns elementos realísticos
+//	Fazer jogador aprender alguma coisa (joguinho de Git) ( TALVEZ ! )
 
-
-Você é um aluno da poli 
+Você é um aluno da poli e seu objetivo no jogo é sair de lá.
 
 
 
@@ -16,9 +15,12 @@ Contadores:
 	Esforço ( stamina )
 	Número de DPs
 	Eventos sem dormir
+	Aulas perdidas
 
+SALAS: 
+//	SALA
+//		ações
 
-SALAS:
 	GERAL
 		JUPITER-WEB
 			Número de DPs,
@@ -43,14 +45,15 @@ SALAS:
 
 	-
 
-
 ITENS:
+	calculadora HP
+	terminal
 
 FINAIS
 	Transferência pro IME
 	Transferência pra FEA
 	Jubilado (game over)
-	5 Bola
+	Final 5 Bola
 	Duplo Diploma
 
 
@@ -63,16 +66,3 @@ COMEÇO
 
 IDEIAS ENGRAÇADAS
 	Número de DPs ( a cada vez que você vê, aumenta 1 )
-
-
-
-
-itens importantes:
-calculadora HP
-terminal
-
-bata da atlética
-
-
-
-
