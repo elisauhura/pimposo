@@ -11,18 +11,15 @@ typedef struct {
 	void * next;
 } Node;
 
-typedef Node * List;
+typedef struct{
+	Node * node;
+	int size;
+} List;
 
-typedef struct {
-	List l;
-	void * v;
-} List_Pack;
-
-List List_create(void);
-void List_destroy(List l);
-List List_insert(List l, void * value, str name); /*Return pointer to node(value) or NULL, copies str*/
-void * List_query(List l, str name);
-List_Pack List_remove(List l, str name); /* Needs to return a new List, because the first node may be removed, return NULL if nout found item to be removed*/
-
+List * List_create(void);
+void List_destroy(List * l);
+Node * List_insert(List * l, void * value, str name); /*Return pointer to node(value) or NULL, copies str*/
+void * List_query(List * l, str name);
+void * List_remove(List * l, str name); 
 
 #endif
