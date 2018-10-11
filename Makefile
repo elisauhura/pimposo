@@ -1,6 +1,9 @@
 CC=gcc
 Flags=-Wall -Werror
 
+std:
+	$(CC) -c std.c $(Flags) -o std.o
+
 list:
 	$(CC) -c list.c $(Flags) -o list.o
 
@@ -17,11 +20,11 @@ test_hash: hash
 	./test_hash
 	rm test_hash
 
-element:
+element: std
 	$(CC) -c element.c $(Flags) -o element.o
 
 test_element: element
-	$(CC) element.test.c element.o $(Flags) -o test_element
+	$(CC) element.test.c element.o std.o $(Flags) -o test_element
 	./test_element
 	rm test_element
 

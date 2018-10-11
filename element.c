@@ -1,35 +1,46 @@
 /* Element.c - By Vitor Silva*/
 
+#include "std.h"
 #include "element.h"
 
 #include <stdlib.h>
 
-Element * newElement(str name) {
+Element * Element_new(Str name, Str dd, Str di, Str id, Str ii, Str longdesc, Str shortdesc, List * objlist, List * attributes, List * actions, Str animation) {
     Element * e = malloc(sizeof(Element));
     if(e == NULL) return NULL;
-    int i;
-    for(i = 0; name[i] != '\0'; i++);
-	e->Name = malloc(sizeof(char) * (i + 1));
-	if(e->Name == NULL) {
-		free(e);
-		return NULL;
-	}
-	for(i = 0; name[i] != '\0'; i++) e->Name[i] = name[i]; e->Name[i] = '\0';
+	e->Name = Str_copy(name);
+	e->Articles[0] = Str_copy(dd);
+	e->Articles[1] = Str_copy(di);
+	e->Articles[2] = Str_copy(id);
+	e->Articles[3] = Str_copy(ii);
+	e->LongDesc = Str_copy(longdesc);
+	e->ShortDesc = Str_copy(shortdesc);
+	e->ObjList = objlist;
+	e->Attributes = attributes;
+	e->Actions = actions;
+	e->Animation = Str_copy(animation);
 
-    char class[] = "Element";
-	e->__Class = malloc(sizeof(char) * 8);
-	if(e->Name == NULL) {
-        free(e->Name);
-		free(e);
-		return NULL;
-	}
-	for(i = 0; class[i] != '\0'; i++) e->__Class[i] = class[i]; e->__Class[i] = '\0';
+
+	e->__Super = NULL;
+	e->__Child = NULL;
+	e->__Self = e;
+	e->__Class = Str_copy("Element");
     return e;
 }
 
 void freeElement(Element * e) {
     if(e == NULL) return;
     free(e->Name);
+	free(e->Articles[0]);
+	free(e->Articles[1]);
+	free(e->Articles[2]);
+	free(e->Articles[3]);
+	free(e->LongDesc);
+	free(e->ShortDesc);
+	free(e->Animation);
+	List_free(e->ObjList);
+	List_free(e->Attributes);
+	List_free(e->Actions);
     free(e->__Class);
     free(e);
 }

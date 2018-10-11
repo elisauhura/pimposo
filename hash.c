@@ -6,7 +6,10 @@
 #include <stdlib.h>
 
 int hash_function(str key) {
-	return 0;
+	int hash;
+	for(int i = 0, hash = 0; key[i] != '\0'; i++)
+    	hash = hash << 4 + key[i];
+	return hash;
 }
 
 TabSim TabSim_create(int size) {

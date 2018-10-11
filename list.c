@@ -16,7 +16,7 @@ List * List_create(void) {
 	return l;
 }
 
-void List_destroy(List * l) {
+void List_free(List * l) {
 	for(Node * q = l->node, * g; q != NULL; q = g) {
 		g = (Node *) q->next;
 		free(q->name);

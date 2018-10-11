@@ -12,11 +12,11 @@ typedef struct {
 typedef struct{
 	int size;
 	List * entries;
-} *TabSim;
+} TabSim;
 
 /*Prototypes*/
-TabSim TabSim_create(int size);
-void TabSim_destroy(TabSim t);
-Bool TabSim_insert(TabSim t, str key, void * value);
-Element * TabSim_query(TabSim t, str key);
-Bool TabSim_remove(TabSim t, str key);
+TabSim * TabSim_create(int size);
+void TabSim_destroy(TabSim * t);
+Bool TabSim_insert(TabSim * t, str key, void * value);
+Element * TabSim_query(TabSim * t, str key);
+Bool TabSim_remove(TabSim * t, str key);

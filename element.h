@@ -1,25 +1,24 @@
 /* Element.h - By Vitor Silva */
 
-#include "type.h"
+#include "std.h"
+#include "list.h"
 
 typedef struct {
 	str Name;
-
-	/* For the Future
-	str Articles[4];
+	str Articles[4]; /*dd, di, id, ii: eg: o, do, um , dum*/
 	str LongDesc;
 	str ShortDesc;
-	Element * ObjList;
-	void * Attributes;
-	str Action[];
+	List * ObjList;
+	List * Attributes;
+	List * Actions;
 	str Animation;
-	*/
 
 	/*OOP*/
 	void * __Super;
 	void * __Child;
 	void * __Self;
 	str __Class;
+	void (* free) (void * t);
 } Element;
 
 typedef struct {
@@ -31,6 +30,7 @@ typedef struct {
 	void * __Child;
 	void * __Self;
 	str __Class;
+	void (* free) (void * t);
 } Path;
 
 typedef struct {
@@ -41,6 +41,7 @@ typedef struct {
 	void * __Child;
 	void * __Self;
 	str __Class;
+	void (* free) (void * t);
 } Place;
 
 typedef struct {
@@ -52,6 +53,7 @@ typedef struct {
 	void * __Child;
 	void * __Self;
 	str __Class;
+	void (* free) (void * t);
 } Object;
 
 /* @Actions
@@ -61,5 +63,5 @@ typedef struct {
  ...
 */
 
-Element * newElement(str name);
-void freeElement(Element * e);
+Element * Element_new(str name, str dd, str di, str id, str ii, str longdesc, str shortdesc, List * objlist, List * attributes, List * actions, str animation);
+void Element_free(Element * e);
